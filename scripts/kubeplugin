@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define command-line arguments
+
+# Set default namespace if not provided
+RESOURCE_TYPE=${1:-node}
+
+# Set default namespace if not provided
+NAMESPACE=${2:-default}
+
+# Retrieve resource usage statistics from Kubernetes
+kubectl top $RESOURCE_TYPE -n $NAMESPACE | tail -n +2 | while read -r line
+do
+  # Extract CPU and memory usage from the output
+  NAME=$(echo $line | awk '{print $1}')
+  CPU=$(echo $line | awk '{print $2}')
+  MEMORY=$(echo $line | awk '{print $3}')
+
+  # Output the statistics to the console
+  printf "%-15s %-15s %-30s %-10s %-10s\n" "Resource" "Namespace" "Name" "CPU" "Memory"
+  printf "%-15s %-15s %-30s %-10s %-10s\n" "$RESOURCE_TYPE" "$NAMESPACE" "$NAME" "$CPU" "$MEMORY"
+done
