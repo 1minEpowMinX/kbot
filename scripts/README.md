@@ -1,2 +1,4 @@
 # Instructions for using the script kubeplugin  
-Syntax: kubeplugin (RESOURSE_TYPE|default: node) (NAMESPACE|default: default)
+The script initializes the retrieval of resource usage statistics from Kubernetes  
+**Syntax: kubeplugin (RESOURSE_TYPE|default value: node) (NAMESPACE|default value: default)**  
+Demo:
