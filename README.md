@@ -1,5 +1,6 @@
 # kbot
 The project is a functional bot with further scaling during the learning and practicing period.  
+The project also contains custom scripts and yaml-manifests
 
 # YAML PROMPTS
 
