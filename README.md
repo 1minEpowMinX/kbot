@@ -4,7 +4,7 @@ The project also contains custom scripts and yaml-manifests
 
 # YAML PROMPTS
 
-|   NAME  | PROMPT | DESCRIPTION | EXAMPLE |
+|             NAME            |            PROMPT           |                         DESCRIPTION                       |           EXAMPLE         |
 |              -              |              -              |                              -                            |              -            |
 | app.yaml                    | create nginx deployment     | YAML to define the basic schema of nginx                  | [app.yaml]                |
 | app-livenessProbe.yaml      | create nginx livenessProbe  | YAML to define a liveness probe for nginx                 | [app-livenessProbe.yaml]  |
