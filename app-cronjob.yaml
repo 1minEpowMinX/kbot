@@ -1,0 +1,21 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: nginx-cronjob
+spec:
+  schedule: "*/5 * * * *"  # Runs every 5 minutes
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: nginx
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:latest
+            command:
+            - /bin/sh
+            - -c
+            - date; echo "Running Nginx cron job"
+          restartPolicy: OnFailure
