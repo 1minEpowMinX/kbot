@@ -3,6 +3,7 @@ The project is a functional bot with further scaling during the learning and pra
 The project also contains custom scripts and yaml-manifests
 
 # YAML PROMPTS
+Created with the support of OpenAI technologies
 
 |             NAME            |            PROMPT           |                         DESCRIPTION                       |           EXAMPLE         |
 |              -              |              -              |                              -                            |              -            |
