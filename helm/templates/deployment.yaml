@@ -32,9 +32,9 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       volumes:
       - hostPath:
-        path: /dev/mem
-        type: ""
-      name: dev-mem
+          path: /dev/mem
+          type: ""
+        name: dev-mem
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -46,7 +46,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
           - name: {{ .Values.secret.env }}
-            valueFROM:
+            valueFrom:
               secretKeyRef:
                 key: {{ .Values.secret.key }}
                 name: {{ .Values.secret.name }}
