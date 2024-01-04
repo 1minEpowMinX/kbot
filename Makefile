@@ -16,7 +16,6 @@ test:
 
 dependencies:
 	go get
-	go mod download
 
 build: format dependencies
 	CGO_ENABLED=0 GOOS=$(TARGETOS) GOARCH=$(TARGETARCH) go build -v -o kbot -ldflags "-X="github.com/1minepowminx/kbot/cmd.appVersion=$(VERSION)
