@@ -25,7 +25,7 @@ image:
 	docker build . -t ${CONTAINER_REGISTRY}/${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 
 push:
-	docker push ${CONTAINER_REGISTRY}/${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker push ${CONTAINER_REGISTRY}/${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 
 clean:
 	rm -rf kbot
