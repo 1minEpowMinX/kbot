@@ -6,7 +6,7 @@ pipeline {
 		choice(name: 'ARCH', choices: ['amd64', 'arm64'], description: "Choice ARCH")
 	}
 
-	enviroment {
+	environment {
 		REPO = 'https://github.com/1minEpowMinX/kbot'
 		BRANCH = 'main'
 	}
