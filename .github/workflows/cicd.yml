@@ -37,8 +37,9 @@ jobs:
       - name: Build&Push
         env:
           APP: "kbot"
+          CONTAINER_REGISTRY: ghcr.io
           REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
-        run: make image push CONTAINER_REGISTRY=ghcr.io
+        run: make image push
 
   cd:
     name: CD
