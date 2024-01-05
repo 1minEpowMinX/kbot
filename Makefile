@@ -1,10 +1,10 @@
 APP=$(shell basename $(shell git remote get-url origin))
-CONTAINER_REGISTRY=docker.io #gcr.io, ghcr.io
+CONTAINER_REGISTRY?=docker.io #gcr.io, ghcr.io
 REGISTRY=1minepowminx
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 
-TARGETOS=linux #linux, macOS, windows
-TARGETARCH=amd64 #arm64 | shell dpkg --print-architecture
+TARGETOS?=linux #linux, macOS, windows
+TARGETARCH?=amd64 #arm64 | shell dpkg --print-architecture
 
 format:
 	gofmt -s -w ./
