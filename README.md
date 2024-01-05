@@ -11,7 +11,7 @@ In addition to the Helm chart, we have also created a GitHub release that includ
 To get started, simply download the Helm chart package from the GitHub release page and use it to install the application on your Kubernetes cluster. You can also view the release notes for more information on new features, bug fixes, and other changes included in this release.<br>  
 **INSTRUCTION:**
   - To set the Heml chart use: **helm install <CHART_NAME> <CHART_URL from release or local your path>**
-  - Create a secret with your token: **kubectl create secret generic kbot --from-literal=token='YOUR_TOKEN'**
+  - Create a secret with your token in namespace: **kubectl create secret generic kbot --from-literal=token='YOUR_TOKEN'**
   - Check if the chart is working: **kubectl get pods**
   - Use the release and enjoy!
 
