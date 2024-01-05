@@ -1,6 +1,23 @@
 # kbot
 The project is a functional bot with further scaling during the learning and practicing period.  
-The project also contains custom scripts and yaml-manifests
+The project also contains custom scripts and yaml-manifests  
+
+# Helm chart and realese  
+Dear Users,
+We are excited to announce the first release of the bot-project! This release marks a significant milestone in our journey to provide multi-arch builds and support for Kubernetes installations.<br>
+To make it easier to deploy and manage, we have created a Helm chart that can be used to install and configure the application on Kubernetes clusters. The Helm chart includes all the necessary configurations and dependencies to get you up and running quickly.<br>
+In addition to the Helm chart, we have also created a GitHub release that includes the chart package, along with detailed release notes and instructions on how to deploy and use bot-project. This release is available now on our GitHub repository, and we encourage you to check it out.<br>
+[Release](https://github.com/1minEpowMinX/kbot/releases/tag/v1.0.7)<br>
+To get started, simply download the Helm chart package from the GitHub release page and use it to install the application on your Kubernetes cluster. You can also view the release notes for more information on new features, bug fixes, and other changes included in this release.<br>  
+**INSTRUCTION:**
+  - To set the Heml chart use: **helm install <CHART_NAME> <CHART_URL from release or local your path>**
+  - Create a secret with your token: **kubectl create secret generic kbot --from-literal=token='YOUR_TOKEN'**
+  - Check if the chart is working: **kubectl get pods**
+  - Use the release and enjoy!
+
+Thank you for your support and happy deploying!
+
+Best regards!
 
 # YAML PROMPTS
 Created with the support of OpenAI technologies
