@@ -1,5 +1,6 @@
 pipeline {
 	agent any
+	//requires ssh building agents plugin
 
 	parameters {
 		choice(name: 'OS', choices: ['linux', 'darwin', 'windows', 'macOS'], description: "Pick OS")
@@ -45,7 +46,7 @@ pipeline {
 			steps {
 				echo 'IMAGE PUSH EXEC STARTED'
 				script {
-					docker.withRegistry('', 'dockerhub') {
+					docker.withRegistry('', 'dockerhub') { //requires docker pipeline plugin
 						sh 'make push'
 					}
 				}
