@@ -1,6 +1,6 @@
 module github.com/1minepominx/kbot
 
-go 1.20
+go 1.21.4
 
 require (
 	github.com/1minepowminx/kbot v1.0.6
