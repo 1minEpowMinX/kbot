@@ -8,7 +8,7 @@ image:
   repository: "1minepowminx"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.7-ed970ba"
+  tag: "v1.0.7-3913894"
   os: linux
   arch: amd64
 secret:
