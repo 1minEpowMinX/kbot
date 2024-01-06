@@ -16,11 +16,7 @@ pipeline {
 		stage("clone") {
 			steps {
 				echo 'Clone repository'
-				git (
-					branch: '${BRANCH}', 
-					url: '${REPO}',
-					credentialsId: 'github'
-				) //trouble spot
+				git branch: 'main', credentialsId: 'github', url: 'https://github.com/1minEpowMinX/kbot'
 			}
 		}
 
