@@ -32,4 +32,7 @@ Created with the support of OpenAI technologies
 | app-job.yaml                |create nginx job             | YAML to define a job for nginx                            | [app-job.yaml](yaml/app-job.yaml)                       |
 | app-multicontainer.yaml     | create nginx multicontainer | YAML to define a pod that runs more than one container    | [app-multicontainer.yaml](yaml/app-multicontainer.yaml) |
 | app-resources.yaml          | create nginx resources      | YAML to configure resource requests and limits for nginx  | [app-resources.yaml](yaml/app-resources.yaml)           |
-| app-secret-env.yaml         | create nginx secret-env     | YAML to define environment variables using secrets        | [app-secret-env.yaml](yaml/app-secret-env.yaml)         |
+| app-secret-env.yaml         | create nginx secret-env     | YAML to define environment variables using secrets        | [app-secret-env.yaml](yaml/app-secret-env.yaml)         |  
+
+# Workflow  
+![workflow-1](https://github.com/1minEpowMinX/kbot/assets/129176682/322bc27a-a92b-4db6-a3cc-4d739bba9647)

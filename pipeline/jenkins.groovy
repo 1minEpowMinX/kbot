@@ -1,9 +1,10 @@
 pipeline {
 	agent any
+	//requires ssh building agents plugin
 
 	parameters {
-		choice(name: 'OS', choices: ['linux', 'darwin', 'windows', 'macOS'], description: "Choice OS")
-		choice(name: 'ARCH', choices: ['amd64', 'arm64'], description: "Choice ARCH")
+		choice(name: 'OS', choices: ['linux', 'darwin', 'windows', 'macOS'], description: "Pick OS")
+		choice(name: 'ARCH', choices: ['amd64', 'arm64'], description: "Pick ARCH")
 	}
 
 	environment {
@@ -15,37 +16,37 @@ pipeline {
 
 		stage("clone") {
 			steps {
-				echo 'Clone repository'
-				git branch: '${BRANCH}', url: '${REPO}'
+				echo 'CLONE REPOSITORY'
+				git branch: 'main', credentialsId: 'github', url: 'https://github.com/1minEpowMinX/kbot'
 			}
 		}
 
 		stage("test") {
 			steps {
-				echo 'Test exec started'
+				echo 'TEST EXEC STARTED'
 				sh 'make test'
 			}
 		}
 
 		stage("build") {
 			steps {
-				echo 'Build exec started'
-				sh 'make build GOOS=${params.OS} GOARCH=${params.ARCH}'
+				echo 'BUILD EXEC STARTED'
+				sh "make build GOOS=${params.OS} GOARCH=${params.ARCH}"
 			}
 		}
 
 		stage("image") {
 			steps {
-				echo 'Image build exec started'
+				echo 'IMAGE BUILD EXEC STARTED'
 				sh 'make image'
 			}
 		}
 
 		stage("push") {
 			steps {
-				echo 'Image push exec started'
+				echo 'IMAGE PUSH EXEC STARTED'
 				script {
-					docker.withRegistry('', 'dockerhub') {
+					docker.withRegistry('', 'dockerhub') { //requires docker pipeline plugin
 						sh 'make push'
 					}
 				}
