@@ -1,9 +1,8 @@
-module github.com/1minepominx/kbot
+module github.com/1minepowminx/kbot
 
-go 1.21.4
+go 1.20
 
 require (
-	github.com/1minepowminx/kbot v1.0.6
 	github.com/spf13/cobra v1.8.0
 	gopkg.in/telebot.v3 v3.2.1
 )
