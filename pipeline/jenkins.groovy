@@ -30,7 +30,7 @@ pipeline {
 		stage("build") {
 			steps {
 				echo 'BUILD EXEC STARTED'
-				sh 'make build GOOS=${params.OS} GOARCH=${params.ARCH}'
+				sh "make build GOOS=${params.OS} GOARCH=${params.ARCH}"
 			}
 		}
 
