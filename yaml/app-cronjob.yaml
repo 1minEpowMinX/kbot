@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: nginx-cronjob
 spec:
-  schedule: "*/5 * * * *"  # Runs every 5 min
+  schedule: "*/5 * * * *"  # Runs every 5 minutes
   jobTemplate:
     spec:
       template:
