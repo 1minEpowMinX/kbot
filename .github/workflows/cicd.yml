@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - develop
-      - main
+      # - main
 
 jobs:
   ci:
@@ -41,7 +41,7 @@ jobs:
       - name: Build&Push
         env:
           APP: "kbot"
-          CONTAINER_REGISTRY: "docker.io"
+          CONTAINER_REGISTRY: "ghcr.io"
           REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
         run: make image push
 
